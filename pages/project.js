@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from '../components/Header/Header';
+import Layout from '../components/Header/Layout';
 
 const Project = () => {
     return (
-        <Header>
+        <Layout>
             <div>내 프로젝트</div>
-        </Header>
+        </Layout>
     )
 }
 

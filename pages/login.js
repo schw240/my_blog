@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from '../components/Header/Header';
+import Layout from '../components/Header/Layout';
 
 const Login = () => {
     return (
-        <Header>
+        <Layout>
             <div>로그인 페이지</div>
-        </Header>
+        </Layout>
     )
 }
 
