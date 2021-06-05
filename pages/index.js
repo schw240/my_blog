@@ -1,6 +1,4 @@
 import styles from '../styles/Home.module.css'
-import React, { useState, useMemo } from 'react';
-import axios from 'axios';
 import Image from "next/image";
 import Head from 'next/head'
 import Layout from '../components/Header/Layout';
@@ -18,7 +16,7 @@ const Home = ({ blogs }) => {
         <body>
           <Layout>
             {/* 이미지 + 메세지 */}
-            <div className={styles.visualContainer}>
+            <section className={styles.visualContainer}>
               <div className={styles.visual}>
                 <div className={styles.mainImg}>
                   <div className={styles.codeAni}>
@@ -35,10 +33,10 @@ const Home = ({ blogs }) => {
                   개발자 김한주입니다.
                 </div>
               </div>
-            </div>
+            </section>
 
             {/* 기술스택 */}
-            <div className={styles.skillContainer}>
+            <section className={styles.skillContainer}>
               <div className={styles.skills}>
                 <div>Skills</div>
               </div>
@@ -70,10 +68,10 @@ const Home = ({ blogs }) => {
                   <p>Linux, AWS 서버구축<br />Git 버전관리</p>
                 </li>
               </ul>
-            </div>
+            </section>
 
             {/* 개인프로젝트 */}
-            <div className={styles.pjContainer}>
+            <section className={styles.pjContainer}>
               <div className={styles.myProject}>
                 <a href="/project">
                   <h3>개인 프로젝트</h3>
@@ -83,10 +81,10 @@ const Home = ({ blogs }) => {
                   <p>상세보기 ▶</p>
                 </a>
               </div>
-            </div>
+            </section>
           
             {/* 블로그 */}
-            <div className={styles.blogContainer}>
+            <section className={styles.blogContainer}>
               <div className={styles.blog}>
                 <div>Blog</div>
               </div>
@@ -96,7 +94,7 @@ const Home = ({ blogs }) => {
               {/* 캐러샐로 내용 가져오기 */}
               <br/>
               <div>캐러셀</div>
-            </div>
+            </section>
           </Layout>
         </body>
       </div>
