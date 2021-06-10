@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 
 const Layout = ({ children }) => {
-    const [showLinks, setShowLinks] = useState(true);
+    const [showLinks, setShowLinks] = useState(false);
 
     return (
       <>
