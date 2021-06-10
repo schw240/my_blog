@@ -5,7 +5,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-
+ 
 a {
   color: inherit;
   text-decoration: none;
@@ -14,7 +14,6 @@ a {
 * {
   box-sizing: border-box;
 }
-
 
 .header {
   background: white;
@@ -40,13 +39,18 @@ a {
 }
 
 .menu {
-  float: left;
+  /* float: left; */
+  display: flex;
+  list-style: none;
 }
-
+#hidden {
+  display: flex;
+}
 .menu-item {
-  float: left;
+  /* float: left; */
   padding: 8px 10px;
   font-size: large;
+  background-color: #fff;
 }
 
 .menu-item:hover {
@@ -54,7 +58,7 @@ a {
   padding: 8px 10px;
   font-size: large;
   cursor: pointer;
-  color: lightgray;
+  color: #4078c0;
 }
 
 .clearfix::after {
@@ -116,5 +120,99 @@ a {
 .info p{
   display: inline;
   margin: 0 10px;
-  color: lightslategrey;
+}
+
+#toggle-btn {
+  display: none;
+  background: url("../public/images/toggle-btn.svg");
+  /* background-repeat: no-repeat; */
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  cursor: pointer;
+  text-indent: -9999px;
+}
+
+@media (max-width: 999px) {
+  #toggle-btn {
+    display: flex;
+  }
+  .container {
+    width: 100%;
+  }
+  .container-left {
+    margin-left: -25px;
+    height: 100%;
+  }
+  .logo {
+    float: none;
+    margin-left: 30px;
+  }
+  .logo img {
+    width: 80px;
+    height: 60px;
+  }
+  .menu {
+    /* border: 1px solid blue; */
+    display: none;
+    width: 100vw;
+    margin-left: 8px;
+    flex-direction: column;
+  }
+  #hidden {
+    position: absolute;
+    /* border: 3px solid green; */
+    box-sizing: border-box;
+    border-top: 1px solid lightgray;
+    margin-bottom: 1px;
+    z-index: 2;
+  }
+  .menu-item {
+    background-color: #fff;
+    margin-left: -30px;
+    padding-left: 25px;
+  }
+  
+
+  /* FOOTER */
+  .footerContainer {
+    padding: 28px 16px;
+  }
+  .footerContents {
+    /* display: none; */
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footerContents ul {
+    margin-left: -43px;
+  }
+  .info {
+    /* border: 3px solid green; */
+  }
+  .info p:first-child {
+    display: block;
+    margin: 0;
+  }
+  .info p {
+    display: inline-block;
+    line-height: 160%;
+    /* border: 3px solid tomato; */
+    margin: 0;
+    margin-right: 10px;
+    font-size: 12px;
+  }
+  .info p:nth-child(3) {
+    display: none;
+  }
+  .info p:nth-child(5) {
+    display: none;
+  }
+  .info p:nth-child(6) {
+    display: none;
+  }
+  .info p:nth-child(7) {
+    display: none;
+  }
 }
