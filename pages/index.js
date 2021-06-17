@@ -1,13 +1,14 @@
 import styles from '../styles/Home.module.css'
 import Image from "next/image";
-import Layout from '../components/Header/Layout';
+import Header from '../components/header';
+import Footer from '../components/footer'
 
 const Home = ({ blogs }) => {
     return (
       <div className={styles.container}>
         
         <body>
-          <Layout>
+          <Header>
             {/* 이미지 + 메세지 */}
             <section className={styles.visualContainer}>
               <div className={styles.visual}>
@@ -88,7 +89,8 @@ const Home = ({ blogs }) => {
               <br/>
               <div>캐러셀</div>
             </section>
-          </Layout>
+            <Footer></Footer>
+          </Header>
         </body>
       </div>
   )

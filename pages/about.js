@@ -1,11 +1,12 @@
 import styles from '../styles/About.module.css'
 import Image from "next/image";
 import React from 'react';  
-import Layout from '../components/Header/Layout';
+import Header from '../components/header';
+import Footer from '../components/footer'
 
 const about = () => {
     return (
-        <Layout>
+        <Header>
             <div className={styles.container}>
 
                 {/* PATH */}
@@ -350,7 +351,8 @@ const about = () => {
                     </div>
                 </section>
             </div>
-        </Layout>
+            <Footer></Footer>
+        </Header>
     )
 }
 
