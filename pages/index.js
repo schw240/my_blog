@@ -9,13 +9,10 @@ import ReactHtmlParser from 'react-html-parser'
 const home = ({ blogs }) => {
     return (
       <div className={styles.container}>
-        
-        <body>
           <Header>
             <Home></Home>
             <Footer></Footer>
           </Header>
-        </body>
       </div>
   )
 }

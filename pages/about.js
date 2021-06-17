@@ -1,14 +1,21 @@
-import styles from '../styles/About.module.css'
-import Image from "next/image";
 import React from 'react';  
 import Header from '../components/layout/header';
-import Footer from '../components/layout/footer'
-import About from '../components/about/about'
+import Footer from '../components/layout/footer';
+import AboutTitle from '../components/about/aboutTitle';
+import Brand from '../components/about/brand';
+import Introduce from '../components/about/introduce';
+import Keyword from '../components/about/keyword';
+import Skills from '../components/about/skills';
+
 
 const about = () => {
     return (
         <Header>
-            <About></About>
+            <AboutTitle></AboutTitle>
+            <Keyword></Keyword>
+            <Introduce></Introduce>
+            <Skills></Skills>
+            <Brand></Brand>
             <Footer></Footer>
         </Header>
     )
