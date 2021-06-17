@@ -4,12 +4,10 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 
-const Footer = ({ children }) => {
+const Footer = ({}) => {
 
     return (
       <>
-        {children}
-
         <footer className="footerContainer">
         <div className="footerContents">
             <span>김한주</span>
@@ -60,8 +58,5 @@ const Footer = ({ children }) => {
     );
   };
 
-Footer.propTypes = {
-    children: PropTypes.node.isRequired,
-  }
   
 export default Footer;

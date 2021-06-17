@@ -3,6 +3,8 @@ import styles from '../../styles/Blog.module.css';
 import Link from 'next/link';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import blogText from '../../public/texts/blog'
+import ReactHtmlParser from 'react-html-parser';
 
 const BlogLayout = ({ children, cate, cnt }) => {
   return (
@@ -18,8 +20,7 @@ const BlogLayout = ({ children, cate, cnt }) => {
             <br />
             <div>
               <div className={styles.headerDesc}>
-                개발과 관련된 공부 내용들을<br />
-                자세히 기록하고 있습니다.
+                {ReactHtmlParser(blogText.header)}
               </div>
             </div>
           </div>
