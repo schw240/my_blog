@@ -1,16 +1,19 @@
 /* COMMON */
-.container {
-}
 #section_line {
     border-bottom: 1px solid #ebebeb;
-    width: auto;
+    width: 100vw;
+    margin-left: -250px;
 }
-
+.container {
+    /* border: 3px solid tomato; */
+    width: 1200px;
+    margin: 0 auto;
+}
 /* PATH */
 .location {
     /* border: 5px solid green; */
     padding: 0 40px;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 .location p {
     font-size: 12px;
@@ -42,6 +45,7 @@
 .title {
     box-sizing: border-box;
     padding: 0 40px;
+    margin-top: 30px;
     /* border: 5px solid blueviolet; */
 }
 .title h2 {
@@ -51,6 +55,7 @@
 
 /* KEYWORD */
 .keywords {
+    margin-top: 50px;
     box-sizing: border-box;
     padding: 0 40px;
     /* border: 5px solid green; */

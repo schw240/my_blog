@@ -16,23 +16,27 @@ a {
 }
 
 .header {
+  /* border: 3px solid green; */
   background: white;
   border-bottom: 1px solid lightgray;
 }
 
 .container {
-  width: 100%;
+  /* border: 3px solid blue; */
+  width: 1200px;
   margin: auto;
 }
 
 .container-left {
   margin-left: 30px;
-  padding: 20px 0;
+  padding: 5px 0;
 }
 
 .logo {
   float: left;
-  margin-right: 50px;
+  margin-top: 8px;
+  /* margin-right: 50px; */
+  /* border: 1px solid; */
 }
 .logo img {
   display: block;
@@ -40,6 +44,7 @@ a {
 
 .menu {
   /* float: left; */
+  /* border: 1px solid; */
   display: flex;
   list-style: none;
 }
@@ -48,17 +53,17 @@ a {
 }
 .menu-item {
   /* float: left; */
-  padding: 8px 10px;
+  padding: 8px 25px;
   font-size: large;
   background-color: #fff;
 }
 
 .menu-item:hover {
-  float: left;
-  padding: 8px 10px;
-  font-size: large;
+  /* float: left; */
+  /* padding: 8px 10px; */
+  /* font-size: large; */
   cursor: pointer;
-  color: #4078c0;
+  color: #9080a6;
 }
 
 .clearfix::after {
@@ -69,14 +74,16 @@ a {
 
 .footerContainer {
   background-color: #333333;
-  width: 100%px;
-  margin: 0 auto;
+  /* border: 3px solid blue; */
   position: relative;
   box-sizing: border-box;
   padding: 40px 30px;
 }
 
 .footerContents {
+  /* border: 3px solid tomato; */
+  margin: 0 auto;
+  width: 1200px;
   color: lightgray;
   display: flex;
   flex-direction: row;
@@ -99,6 +106,7 @@ a {
   float: left;
   padding:3px;
   margin-right: 3px;
+  /* border: 3px solid turquoise; */
 }
 
 /* .footerlinks {
@@ -107,7 +115,6 @@ a {
   text-decoration: none;
 } */
 
-
 .info {
   color: #b2bbc3;
   line-height: 18px;
@@ -115,11 +122,17 @@ a {
   letter-spacing: -.5px;
   margin-top: 5px;
   line-height: 22px;
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 10px;
+  /* border: 3px solid violet; */
 }
 
 .info p{
   display: inline;
-  margin: 0 10px;
+  /* margin: 0 10px; */
+  margin-right: 20px;
+  margin-bottom: 10px;
 }
 
 #toggle-btn {
@@ -140,7 +153,8 @@ a {
     display: flex;
   }
   .container {
-    width: 100%;
+    /* border: 3px solid blue; */
+    /* width: 100%; */
   }
   .container-left {
     margin-left: -25px;
@@ -151,11 +165,11 @@ a {
     margin-left: 30px;
   }
   .logo img {
-    width: 80px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
   .menu {
-    /* border: 1px solid blue; */
+    /* border: 3px solid green; */
     display: none;
     width: 100vw;
     margin-left: 8px;
@@ -163,7 +177,7 @@ a {
   }
   #hidden {
     position: absolute;
-    /* border: 3px solid green; */
+    /* border: 3px solid violet; */
     box-sizing: border-box;
     border-top: 1px solid lightgray;
     margin-bottom: 1px;
@@ -171,6 +185,8 @@ a {
   }
   .menu-item {
     background-color: #fff;
+    margin-top: -10px;
+    height: 50px;
     margin-left: -30px;
     padding-left: 25px;
   }

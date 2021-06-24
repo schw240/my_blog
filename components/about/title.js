@@ -3,22 +3,19 @@ import ReactHtmlParser from 'react-html-parser'
 import styles from '../../styles/About.module.css'
 import aboutText from '../../public/texts/about'
 
-const Introduce = ({}) => {
+const AboutTitle = ({}) => {
   return (
     <>
       <div className={styles.container}>
-        {/* INTRODUCE */}
-        <section className={styles.introduce}>
+        {/* TITLE */}
+        <section className={styles.title}>
           <div>
-            <h2>개발자 소개</h2>
-            {ReactHtmlParser(aboutText.introduce)}
+            <h2>{ReactHtmlParser(aboutText.title)}</h2>
           </div>
         </section>
-        {/* SECTION_LINE */}
-        <div id={styles.section_line} />
       </div>
     </>
   )
 }
 
-export default Introduce
+export default AboutTitle

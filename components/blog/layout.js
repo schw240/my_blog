@@ -1,22 +1,21 @@
-import React from 'react';
-import styles from '../../styles/Blog.module.css';
-import Link from 'next/link';
-import axios from 'axios';
-import PropTypes from 'prop-types';
+import React from 'react'
+import Link from 'next/link'
+import axios from 'axios'
+import PropTypes from 'prop-types'
+import ReactHtmlParser from 'react-html-parser'
 import blogText from '../../public/texts/blog'
-import ReactHtmlParser from 'react-html-parser';
+import styles from '../../styles/Blog.module.css'
 
 const BlogLayout = ({ children, cate, cnt }) => {
   return (
     <>
       <div className={styles.blogContainer}>
+        {/* Header */}
         <main className={styles.header}>
           <div>
             <br />
             <br />
-            <div>
-              블로그
-            </div>
+            <div>블로그</div>
             <br />
             <div>
               <div className={styles.headerDesc}>
@@ -25,8 +24,10 @@ const BlogLayout = ({ children, cate, cnt }) => {
             </div>
           </div>
         </main>
+        {/* Body */}
         <section>
           <div className={styles.listLayout}>
+            {/* Side Bar */}
             <aside>
               <div className={styles.category}>
                 <div>
@@ -46,9 +47,8 @@ const BlogLayout = ({ children, cate, cnt }) => {
                 </div>
               </div>
             </aside>
-            <article>
-              {children}
-            </article>
+            {/* Components (entry or detail) */}
+            <article>{children}</article>
           </div>
         </section>
       </div>

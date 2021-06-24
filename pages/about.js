@@ -1,24 +1,22 @@
-import React from 'react';  
-import Header from '../components/layout/header';
-import Footer from '../components/layout/footer';
-import AboutTitle from '../components/about/aboutTitle';
-import Brand from '../components/about/brand';
-import Introduce from '../components/about/introduce';
-import Keyword from '../components/about/keyword';
-import Skills from '../components/about/skills';
-
+import React from 'react'
+import AboutTitle from '../components/about/title'
+import Brand from '../components/about/brand'
+import Introduce from '../components/about/introduce'
+import Keyword from '../components/about/keyword'
+import Skills from '../components/about/skills'
+import Path from '../components/common/path'
 
 const about = () => {
-    return (
-        <Header>
-            <AboutTitle></AboutTitle>
-            <Keyword></Keyword>
-            <Introduce></Introduce>
-            <Skills></Skills>
-            <Brand></Brand>
-            <Footer></Footer>
-        </Header>
-    )
+  return (
+    <>
+      <Path path=" 소개" />
+      <AboutTitle />
+      <Keyword />
+      <Introduce />
+      <Skills />
+      <Brand />
+    </>
+  )
 }
 
 export default about
