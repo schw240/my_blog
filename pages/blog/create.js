@@ -3,7 +3,9 @@ import Head from 'next/head'
 import axios from 'axios'
 import dynamic from 'next/dynamic'
 
-const Editor = dynamic(() => import('../../components/editor'), { ssr: false })
+const Editor = dynamic(() => import('../../components/editor/editor'), {
+  ssr: false,
+})
 
 const Create = ({ cate }) => {
   return (

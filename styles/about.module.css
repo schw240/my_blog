@@ -45,7 +45,7 @@
 .title {
     box-sizing: border-box;
     padding: 0 40px;
-    margin-top: 30px;
+    /* margin-top: 30px; */
     /* border: 5px solid blueviolet; */
 }
 .title h2 {

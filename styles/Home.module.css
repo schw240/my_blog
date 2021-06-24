@@ -3,9 +3,11 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background-color: #e0d4f3;
+  /* background-color: #333; */
   background-attachment: fixed;
-  height: 400px;
+  /* border: 3px solid green; */
+  /* padding: 10px; */
+  height: 500px;
 }
 
 .visual {
@@ -62,8 +64,8 @@
 }
 
 .codeAni {
-  float: right;
-  right: 120px;
+  /* border: 3px solid green; */
+  left: 1240px;
   animation: updown 0.7s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -81,7 +83,7 @@
 }
 
 .humanImg {
-  /* margin-right: 150px; */
+  margin-right: 450px;
   margin-bottom: 30px;
 }
 
@@ -221,9 +223,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background-color: #e0d4f3;
+  background-color: #333;
   background-attachment: fixed;
-  height: 400px;
+  height: 450px;
 }
 
 .visual {
@@ -235,18 +237,19 @@
 
 .typing {
   font-size: 35px;
-  margin-left: 10px;
+  margin-left: 400px;
   top: 0;
-  color: black;
+  color: whitesmoke;
 }
 
 .typingAni {
   position: relative;
   display: inline-block;
-  margin-left: 15px;
+  margin-left: 400px;
   height: 20px; overflow: hidden;
   /* border: 1px solid; */
   animation: typings 2s steps(30, end) 1;
+  color: whitesmoke;
 }
 
 @keyframes typings {
@@ -264,8 +267,9 @@
   content: "";
   width: 136px;
   height: 13px;
-  top: 3px;
-  border-right: 1px solid black;
+  left: 15px;
+  top: 5px;
+  border-right: 1px solid whitesmoke;
   animation: cursor 1s step-end infinite;
 }
 
