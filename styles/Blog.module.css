@@ -1,4 +1,5 @@
 .blogContainer {
+  /* width: 1200px; */
   width: 1200px;
   margin: 0 auto;
   /* min-height: 800px; */
@@ -15,7 +16,7 @@
   font-weight: 340;
   color: grey;
   /* border: 1px solid black; */
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .headerInfo {
@@ -37,6 +38,7 @@
   flex-wrap: nowrap;
   gap: 1em;
   /* border: 1px solid; */
+  /* background-color: orange; */
 }
 
 .listLayout aside {
@@ -62,9 +64,9 @@
 }
 
 .listLayout article {
-  flex-basis: 700px;
-  flex-grow: 1;
-  flex-shrink: 1;
+  /* flex-basis: 700px; */
+  /* flex-grow: 1; */
+  /* flex-shrink: 1; */
   /* background-color: #ffe0e0; */
 }
 
@@ -73,15 +75,15 @@
   flex-wrap: wrap;
   gap: 1em;
   padding: 10px;
-  /* background-color: #f0f0f0; */
-  /* border: 1px solid red; */
+  background-color: #f0f0f0;
+  border: 3px solid yellow;
 }
 
 .postInfo {
-  min-height: 300px;
-  min-width: 400px;
-  flex-basis: 300px;
-  flex-shrink: 1;
+  /* min-height: 300px; */
+  /* min-width: 400px; */
+  /* flex-basis: 300px; */
+  /* flex-shrink: 1; */
   flex-grow: 1;
   border: 0.5px solid lightgray;
   border-radius: 2%;
@@ -142,4 +144,60 @@
 .postTitle, .postDate {
   padding: 10px;
   display: block;
+}
+
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .blogContainer {
+    width: 100%;
+    padding: 10px;
+  }
+  .headerDesc {
+    font-size: 15px;
+  }
+  .listLayout {
+    /* margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1em; */
+    /* border: 1px solid; */
+    display: block;
+    width: 100%;
+    gap: 1em;
+    border: 3px solid green;
+  }
+
+  .listLayout article {
+    /* flex-basis: 100px; */
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: red;
+  }
+  /* .postBox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 3px solid yellow;
+  } */
+  .postBox {
+    display: block;
+    gap: 1;
+    padding: 10px;
+    /* background-color: #f0f0f0; */
+    border: 3px solid red;
+  }
+  .postInfo {
+    min-height: 0;
+    min-width: 0;
+    /* flex-basis: 300px; */
+    /* flex-shrink: 1; */
+    flex-grow: 0;
+    border: 0.5px solid lightgray;
+    border-radius: 2%;
+    text-align: center;
+    border: 5px solid blue;
+  }
 }

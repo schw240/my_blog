@@ -1,19 +1,18 @@
 /* COMMON */
-#section_line {
-    border-bottom: 1px solid #ebebeb;
-    width: 100vw;
-    margin-left: -250px;
-}
 .container {
     /* border: 3px solid tomato; */
     width: 1200px;
     margin: 0 auto;
+    /* position: relative; */
 }
 /* PATH */
 .location {
-    /* border: 5px solid green; */
+    border: 5px solid green;
+    /* position: relative; */
+    /* left: 0; */
+    margin: 0 auto;
+    width: 1200px;
     padding: 0 40px;
-    margin-top: 50px;
 }
 .location p {
     font-size: 12px;
@@ -241,13 +240,15 @@
 
 
 /* media */
-@media (max-width: 1024px) {
+@media (max-width: 999px) {
     .container {
         width: 100%;
     }
-
+    /* COMMON */
     .location {
-        margin: 0 0 16px 0;
+        display: none;
+        /* width: 100%; */
+        /* margin: 0 0 16px 0; */
     }
 
     .title h2 {
@@ -263,7 +264,10 @@
     .keywors li {
         padding: 8px;
         width: 80px;
-        margin: 0 14px 28px 14px;
+        /* margin: 0 14px 28px 14px; */
+    }
+    .keywords .kwimages {
+        margin-bottom: 10px;
     }
 
     .introduce {
@@ -351,5 +355,11 @@
     .brand .logoBox .bi .biImage {
         background: url('../public/images/bi.png');
         background-repeat: no-repeat;
+    }
+}
+
+@media (max-width: 500px) {
+    .location {
+        display: none;
     }
 }

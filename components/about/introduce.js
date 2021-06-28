@@ -15,7 +15,7 @@ const Introduce = ({}) => {
           </div>
         </section>
         {/* SECTION_LINE */}
-        <div id={styles.section_line} />
+        <div id="section_line" />
       </div>
     </>
   )

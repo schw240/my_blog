@@ -6,7 +6,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Header />
-      <Component {...pageProps} />
+      <div className="inner">
+        <Component {...pageProps} />
+      </div>
       <Footer />
     </>
   )
