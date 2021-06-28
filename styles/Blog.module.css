@@ -1,9 +1,7 @@
 .blogContainer {
-  /* width: 1200px; */
   width: 1200px;
   margin: 0 auto;
   /* min-height: 800px; */
-  padding: 25px;
 }
 
 .header {
@@ -76,7 +74,7 @@
   gap: 1em;
   padding: 10px;
   background-color: #f0f0f0;
-  border: 3px solid yellow;
+  /* border: 3px solid yellow; */
 }
 
 .postInfo {
@@ -165,14 +163,14 @@
     display: block;
     width: 100%;
     gap: 1em;
-    border: 3px solid green;
+    /* border: 3px solid green; */
   }
 
   .listLayout article {
     /* flex-basis: 100px; */
     flex-grow: 0;
     flex-shrink: 0;
-    background-color: red;
+    /* background-color: red; */
   }
   /* .postBox {
     display: flex;
@@ -187,7 +185,7 @@
     gap: 1;
     padding: 10px;
     /* background-color: #f0f0f0; */
-    border: 3px solid red;
+    /* border: 3px solid red; */
   }
   .postInfo {
     min-height: 0;
@@ -198,6 +196,6 @@
     border: 0.5px solid lightgray;
     border-radius: 2%;
     text-align: center;
-    border: 5px solid blue;
+    /* border: 5px solid blue; */
   }
 }

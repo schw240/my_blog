@@ -2,7 +2,7 @@ const blogFunctions = require('./blogFunction')
 
 export default async (req, res) => {
   const sql_post = 'SELECT * FROM blog_test'
-  const sql_cate =  'SELECT * FROM category_test'
+  const sql_cate = 'SELECT * FROM category_test'
   const sql_cnt = 'SELECT COUNT(*) FROM blog_test'
 
   const cate = await blogFunctions.getList(sql_cate)
