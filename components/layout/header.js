@@ -1,9 +1,11 @@
 import Link from 'next/link'
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
+import axios from 'axios'
 import Image from 'next/image'
 import { useState } from 'react'
 
 const Header = () => {
+  // console.log(cate)
   const [showLinks, setShowLinks] = useState(false)
 
   return (
@@ -38,17 +40,11 @@ const Header = () => {
               <Link href="/blog">
                 <a>블로그</a>
               </Link>
-            </li>
-            <li className="blog__items">
-              <Link href="/blog">
-                <a>Python</a>
-              </Link>
-              <Link href="/blog">
-                <a>JavaScript</a>
-              </Link>
-              <Link href="/blog">
-                <a>DataStructure</a>
-              </Link>
+              {/* <ul>
+                <li>파이썬</li>
+                <li>JS</li>
+                <li>DataStructure</li>
+              </ul> */}
             </li>
             <li className="menu-item">
               <Link href="https://github.com/schw240">
@@ -56,6 +52,15 @@ const Header = () => {
               </Link>
             </li>
           </ul>
+        </div>
+        <div>
+          {/* {cate.map((lst) => (
+            <div key={lst.id}>
+              <Link href="/">
+                <a>{lst.name}</a>
+              </Link>
+            </div>
+          ))} */}
         </div>
 
         {/* 토글버튼 */}
@@ -66,5 +71,9 @@ const Header = () => {
     </div>
   )
 }
+
+// Header.propTypes = {
+//   cate: PropTypes.node.isRequired,
+// }
 
 export default Header

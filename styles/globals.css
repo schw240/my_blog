@@ -33,7 +33,7 @@ a {
   z-index: 100;
 }
 .inner {
-  padding: 120px 0;
+  padding: 80px 0;
 }
 
 .container {
@@ -170,6 +170,9 @@ a {
 }
 
 @media (max-width: 999px) {
+  .inner {
+    padding: 1px 0;
+  }
   #toggle-btn {
     display: flex;
   }
@@ -207,6 +210,11 @@ a {
     box-sizing: border-box;
     top: 67px;
     z-index: 2;
+  }
+  /* 블로그 */
+  #hide {
+    /* border: 5px solid green; */
+    display: none;
   }
   .menu-item {
     background-color: #fff;

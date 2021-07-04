@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import axios from 'axios'
 import PropTypes from 'prop-types'
@@ -7,9 +7,15 @@ import blogText from '../../public/texts/blog'
 import styles from '../../styles/Blog.module.css'
 
 const BlogLayout = ({ children, cate, cnt }) => {
+  const [showBtn, setShowBtn] = useState(true)
+
   return (
     <>
       <div className={styles.blogContainer}>
+        <link
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet"
+        />
         {/* Header */}
         <main className={styles.header}>
           <div>
@@ -24,6 +30,23 @@ const BlogLayout = ({ children, cate, cnt }) => {
             </div>
           </div>
         </main>
+        <div
+          id={styles.dropBtn}
+          className="material-icons"
+          onClick={() => setShowBtn(!showBtn)}
+        >
+          expand_more
+        </div>
+
+        <div id={showBtn ? 'hide' : ''} className={styles.toggle__cate}>
+          {cate.map((lst) => (
+            <div key={lst.id}>
+              <Link href="/">
+                <a>{lst.name}</a>
+              </Link>
+            </div>
+          ))}
+        </div>
         {/* Body */}
         <section>
           <div className={styles.listLayout}>

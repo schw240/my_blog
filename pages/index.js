@@ -21,7 +21,7 @@ const Home = ({ blogs }) => {
 Home.getInitialProps = async () => {
   const response = await axios.get('http://localhost:3000/api/blog')
   const { data } = response
-  console.log('data를 보자~ : ', data)
+  // console.log('data를 보자~ : ', data)
   return {
     blogs: data,
   }

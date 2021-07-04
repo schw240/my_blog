@@ -1,6 +1,5 @@
 /* COMMON */
 .container {
-    /* border: 3px solid tomato; */
     width: 1200px;
     margin: 0 auto;
     /* position: relative; */
@@ -11,6 +10,8 @@
     /* position: relative; */
     /* left: 0; */
     margin: 0 auto;
+    margin-top: 50px;
+    
     width: 1200px;
     padding: 0 40px;
 }
