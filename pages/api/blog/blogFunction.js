@@ -27,11 +27,12 @@ blogFunctions.getObj = async function (sql) {
 }
 
 blogFunctions.setToDB = async function (sql, val) {
+  console.log(sql, val)
   let success = false
   try {
     const res = await db.query(sql, val)
     console.log(res)
-    success = true
+    success = res[0].insertId
   } catch (error) {
     success = false
     console.log(error)

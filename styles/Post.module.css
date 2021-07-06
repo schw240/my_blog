@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
 .container {
-  padding: 50px;
+  padding: 10px 15px;
+  background-color: white;
   /* min-height: 800px; */
 }
 
 .title {
-  border-top: 0.5px solid #9080a6;
+  /* border-top: 0.5px solid #9080a6; */
   padding-bottom: 20px;
 }
 
@@ -20,11 +21,6 @@
   border-bottom: 0.5px solid lightgray;
   color: #9080a6;
   height: 40px;
-}
-
-.contentImg {
-  text-align: center;
-  /* border: 1px solid red; */
 }
 
 .contentDetail {

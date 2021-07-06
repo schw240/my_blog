@@ -1,13 +1,66 @@
 import React from 'react'
-import ReactHtmlParser from 'react-html-parser'
-import Image from 'next/image'
+import ReactMarkdown from 'react-markdown'
+import Link from 'next/link'
 import axios from 'axios'
 import styles from '../../styles/Post.module.css'
 
 const BlogDetail = (props) => {
+  console.log(props.detail.id)
+  const submitPost = async () => {
+    await axios
+      .post(`http://localhost:3000/api/blog/delete?id=${props.detail.id}`, {
+        category: post.category,
+        title: post.title,
+        desc: post.desc,
+        content: post.content,
+        imgList: post.imgList,
+      })
+      .then(() => {
+        alert('삭제가 완료되었습니다.')
+        location.replace('/blog')
+      })
+  }
+  const content = props.detail.content.replace(/\n/gi, '  \n')
+  const Heading1 = ({ node, ...props }) => (
+    <h1
+      style={{
+        borderBottom: '4px double',
+        paddingBottom: '1rem',
+      }}
+      {...props}
+    />
+  )
+  const CodeBlock = ({ node, ...props }) => (
+    <code
+      style={{
+        backgroundColor: '#e5eaee',
+        // padding: '2rem',
+        // lineHeight: '1.5rem',
+        // margin: '2rem auto',
+      }}
+      {...props}
+    />
+  )
+  const BlockQuoteStyle = ({ node, ...props }) => (
+    <div
+      style={{
+        padding: '1rem',
+        border: '1px dashed black',
+      }}
+      {...props}
+    />
+  )
+  const imageStyle = ({ node, ...props }) => (
+    <img
+      style={{
+        maxWidth: '100%',
+      }}
+      {...props}
+    />
+  )
   return (
     <>
-      <div>
+      <div className={styles.container}>
         {/* Title */}
         <section className={styles.title}>
           <h2>{props.detail.title}</h2>
@@ -15,11 +68,27 @@ const BlogDetail = (props) => {
         </section>
         {/* Content */}
         <section className={styles.content}>
-          <div className={styles.contentImg}>
-            <Image src="/images/backend.png" width={100} height={100} />
-          </div>
           <div className={styles.contentDetail}>
-            {ReactHtmlParser(props.detail.content)}
+            <ReactMarkdown
+              components={{
+                blockquote: BlockQuoteStyle,
+                h1: Heading1,
+                code: CodeBlock,
+                img: imageStyle,
+              }}
+              children={content}
+            />
+          </div>
+          <div
+            style={{
+              float: 'right',
+              border: '1px solid',
+            }}
+          >
+            <button className={styles.submit} onClick={submitPost}>
+              삭제
+            </button>
+            <Link href={`/blog/update/${props.detail.id}`}>수정하기</Link>
           </div>
         </section>
         {/* Comment */}
