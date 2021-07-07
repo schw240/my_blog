@@ -18,6 +18,7 @@ export default async (req, res) => {
   // 삽입 취소한 사진경로 s3에서 삭제해주기
   for (const i of delList) {
     const key = i.split('jw_blog/')[1]
+    console.log(key, 'key가 뭔가요!')
     await delObj(key)
   }
   // blog 테이블에 데이터 insert

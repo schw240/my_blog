@@ -5,22 +5,18 @@ import axios from 'axios'
 import styles from '../../styles/Post.module.css'
 
 const BlogDetail = (props) => {
-  console.log(props.detail.id)
+  console.log('----------------------------------')
+  const content = props.detail.content.replace(/\n/gi, '  \n')
+
   const submitPost = async () => {
     await axios
-      .post(`http://localhost:3000/api/blog/delete?id=${props.detail.id}`, {
-        category: post.category,
-        title: post.title,
-        desc: post.desc,
-        content: post.content,
-        imgList: post.imgList,
-      })
+      .post(`http://localhost:3000/api/blog/delete?id=${props.detail.id}`, {})
       .then(() => {
         alert('삭제가 완료되었습니다.')
         location.replace('/blog')
       })
   }
-  const content = props.detail.content.replace(/\n/gi, '  \n')
+
   const Heading1 = ({ node, ...props }) => (
     <h1
       style={{

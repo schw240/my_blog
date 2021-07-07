@@ -3,7 +3,7 @@ import Head from 'next/head'
 import axios from 'axios'
 import dynamic from 'next/dynamic'
 
-const Editor = dynamic(() => import('../../components/editor/editor'), {
+const Editor = dynamic(() => import('../../components/editor'), {
   ssr: false,
 })
 

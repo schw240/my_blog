@@ -30,6 +30,7 @@ const Editor = (props) => {
       console.log(err)
       result = false
     }
+
     console.log(result)
     imgList.push(result.url)
     console.log(imgList)
