@@ -7,7 +7,7 @@ import blogText from '../../public/texts/blog'
 import styles from '../../styles/Blog.module.css'
 
 const BlogLayout = ({ children, cate, cnt }) => {
-  const [showBtn, setShowBtn] = useState(true)
+  const [showBtn, setShowBtn] = useState(false)
 
   return (
     <>

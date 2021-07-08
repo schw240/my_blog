@@ -162,13 +162,14 @@
 #dropBtn {
   display: none;
   position: fixed;
-  top: 230px;
-  right: 35px;
+  top: 14px;
+  right: 435px;
   background-color: #333;
   color: #f0f0f0;
   width: 40px;
   align-items: center;
   justify-content: center;
+  z-index: 9999;
 }
 
 
@@ -232,19 +233,27 @@
     padding: 0;
   }
   .toggle__cate {
-    display: flex;
+    display: none;
     flex-direction: column;
     position: fixed;
     z-index: 9999;
     background-color: #fff;
     border: 1px solid #333;
-    width: 15%;
-    top: 274px;
-    right: 33px;
+    width: 20%;
+    top: 58px;
+    right: 370px;
   }
   #dropBtn {
     cursor: pointer;
     padding: 10px 0;
     display: flex;
+  }
+}
+@media (max-width: 600px) {
+  #dropBtn {
+    right: 200px;
+  } 
+  .toggle__cate {
+    right: 200px;
   }
 }
