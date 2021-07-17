@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
-import axios from 'axios'
 import PropTypes from 'prop-types'
 import ReactHtmlParser from 'react-html-parser'
 import blogText from '../../public/texts/blog'
 import styles from '../../styles/Blog.module.css'
 
-const BlogLayout = ({ children, cate, cnt }) => {
+const BlogLayout = ({ children, cate }) => {
   const [showBtn, setShowBtn] = useState(false)
 
   return (
@@ -30,6 +29,7 @@ const BlogLayout = ({ children, cate, cnt }) => {
             </div>
           </div>
         </main>
+
         <div
           id={styles.dropBtn}
           className="material-icons"
@@ -55,14 +55,14 @@ const BlogLayout = ({ children, cate, cnt }) => {
               <div className={styles.category}>
                 <div>
                   <Link href="/blog">
-                    <a>전체 보기 ({cnt})</a>
+                    <a>전체 보기</a>
                   </Link>
                 </div>
                 <br />
                 <div className={styles.subCategory}>
                   {cate.map((lst) => (
-                    <div key={lst.id}>
-                      <Link href="/">
+                    <div key={lst.name}>
+                      <Link href={`/blog/${lst.name}`}>
                         <a>{lst.name}</a>
                       </Link>
                     </div>
@@ -81,8 +81,7 @@ const BlogLayout = ({ children, cate, cnt }) => {
 
 BlogLayout.propTypes = {
   children: PropTypes.node.isRequired,
-  cate: PropTypes.node,
-  cnt: PropTypes.number.isRequired,
+  cate: PropTypes.array,
 }
 
 export default BlogLayout

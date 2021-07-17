@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 html,
 body {
   padding: 0;
@@ -168,6 +169,10 @@ a {
   cursor: pointer;
   text-indent: -9999px;
 }
+
+.utterances {
+  max-width: 100% !important;
+} 
 
 @media (max-width: 999px) {
   .inner {
