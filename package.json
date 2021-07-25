@@ -43,6 +43,8 @@
     "react-html-parser": "^2.0.2",
     "react-markdown": "^6.0.2",
     "react-select": "^4.3.0",
+    "react-syntax-highlighter": "^15.4.3",
+    "remark-gfm": "^1.0.0",
     "serverless": "^2.46.0",
     "serverless-mysql": "^1.5.4",
     "serverless-offline": "^7.0.0",

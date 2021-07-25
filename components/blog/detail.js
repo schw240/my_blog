@@ -1,12 +1,30 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import Link from 'next/link'
-import axios from 'axios'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { tomorrow } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 import styles from '../../styles/Post.module.css'
 
 const BlogDetail = (props) => {
   console.log('----------------------------------')
-  const content = props.detail.content.replace(/\n/gi, '  \n')
+  const { content } = props.detail
+
+  const components = {
+    code({ node, inline, className, children, ...props }) {
+      const match = /language-(\w+)/.exec(className || '')
+      return !inline && match ? (
+        <SyntaxHighlighter
+          style={tomorrow}
+          language={match[1]}
+          PreTag="div"
+          children={String(children).replace(/\n$/, '')}
+          {...props}
+        />
+      ) : (
+        <code className={className} {...props} />
+      )
+    },
+  }
 
   const Heading1 = ({ node, ...props }) => (
     <h1
@@ -45,6 +63,12 @@ const BlogDetail = (props) => {
       {...props}
     />
   )
+  const LinkStyle = ({ node, ...props }) =>
+    props.href.match(/^(http?)?\/\//) ? (
+      <a href={props.href}>{props.children}</a>
+    ) : (
+      <Link to={props.href}>{props.children}</Link>
+    )
 
   return (
     <>
@@ -57,15 +81,7 @@ const BlogDetail = (props) => {
         {/* Content */}
         <section className={styles.content}>
           <div className={styles.contentDetail}>
-            <ReactMarkdown
-              components={{
-                blockquote: BlockQuoteStyle,
-                h1: Heading1,
-                code: CodeBlock,
-                img: imageStyle,
-              }}
-              children={content}
-            />
+            <ReactMarkdown components={components} children={content} />
           </div>
         </section>
       </div>
