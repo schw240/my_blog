@@ -1,126 +1,99 @@
-.body {
-    margin-top: 30px;
-    width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .icons {
-    font-size: 100px;
-    font: #004abf;
-  }
-  
-  .title {
-    color: #004abf;
-  }
-  
-  .desc {
-    font-size: 28px;
-    font-weight: 300;
-    color: #333;
-    margin-top: 20px;
-  }
-  .companyPjt,
-  .personalPjt {
-    padding: 50px 0 80px 0;
-  }
-  .personalPjt {
-    border-top: 1.5px solid #eee;
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.sectionTitle {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sectionTitle span {
+  border-bottom: 11px solid #9080a6;
+}
+
+.projectSection {
+  margin-top: 50px;
+}
+
+.eachProject {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projectInfo {
+  padding: 20px;
+  margin-bottom: 60px;
+  margin-left: 20px;
+}
+
+.projectInfo h1 {
+  font-size: 40px;
+  color: #9080a6;
+  margin-bottom: 0px;
+}
+
+.projectInfo h4 {
+  color: grey;
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.projectInfo p {
+  font-size: 1.1rem;
+  color: #3c3940;
+  line-height: 2rem;
+  width: 400px;
+}
+
+.toLink span {
+  background-color: #9080a6;
+  padding: 10px;
+  margin-right: 10px;
+  color: beige;
+  border-radius: 3%;
+}
+
+@media (max-width: 1200px) and (min-width: 900px) {
+  .container {
     width: 100%;
-    padding-bottom: 200px;
+    padding: 10px;
   }
-  
-  .companyPjtTitle,
-  .personalPjtTitle {
-    font-size: 25px;
-    font-weight: 300;
-    color: #333;
+}
+@media (max-width: 900px) {
+  .container {
+    width: 100%;
+    padding: 10px;
   }
-  
-  .companyPjtDesc,
-  .personalPjtDesc {
-    font-size: 16px;
+  .sectionTitle span img {
+    width: 120px;
   }
-  
-  .companyListBox > li {
-    display: flex;
-    height: 80px;
-    align-items: center;
-    margin: 28px 0;
+  .eachProject {
+    /* border: 3px solid green; */
+    display: grid;
+    place-items: center;
   }
-  
-  .companyListBox,
-  .personalListBox {
-    list-style: none;
-    margin-top: 32px;
-    padding-inline-start: 0px;
+  .projectInfo h1 {
+    font-size: 30px;
   }
-  
-  .companyListBox .intro {
-    display: flex;
-    font-weight: 150;
+  .projectInfo {
+    font-size: 12px;
   }
-  
-  .companyListBox .logo {
-    margin: 0 28px 0 0;
-  }
-  
-  .companyListBox .outline {
-    min-width: 200px;
-    margin: 0 40px 0 0;
-  }
-  
-  .companyListBox .detail {
-    min-width: 300px;
-    margin: 0 60px 0 0;
+  .projectInfo p {
     font-size: 14px;
-    font-weight: 150;
+    width: 100%;
   }
-  .companyListBox .link {
-    display: block;
+} 
+@media (max-width: 900px) and (min-width: 450px) {
+  .projectInfo p {
+    width: 400px;
   }
-  
-  .companyListBox .link a {
-    font-size: 14px;
-    display: inline-block;
-    border-radius: 60px;
-    height: 36px;
-    padding: 0 24px;
-    line-height: 36px;
-    border: 1px solid #ddd;
-  }
-  
-  .companyListBox .link a:hover {
-    color: #fff;
-    background: #004abf;
-  }
-  
-  .personalListBox,
-  .liBox {
-    display: flex;
-  }
-  .liBox {
-    width: 1040px;
-    overflow: hidden;
-  }
-  .personalListBox > .liBox > li {
-    margin: 0 35px 31px 0;
-    cursor: pointer;
-    font-weight: 150;
-  }
-  
-  .personalListBox .title {
-    margin-top: 24px;
-    font-size: 16px;
-    color: #333;
-  }
-  
-  .buttonPrev {
-    width: 90px;
-    height: 300px;
-  }
-  
-  .buttonNext {
-    padding-left: 17px;
-    width: 60px;
-    height: 300px;
-  }
+}
